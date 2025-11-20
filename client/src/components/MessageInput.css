@@ -1,0 +1,79 @@
+.message-input-container {
+  border-top: 2px solid var(--border);
+  background: white;
+  padding: 1rem 1.5rem;
+}
+
+.message-input-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  background: var(--background);
+  border: 2px solid var(--border);
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+  transition: border-color 0.2s;
+}
+
+.message-input-form:focus-within {
+  border-color: var(--primary-color);
+}
+
+.attach-button {
+  background: transparent;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  padding: 0.5rem;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.attach-button:hover {
+  color: var(--primary-color);
+  transform: rotate(45deg);
+}
+
+.message-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  resize: none;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  padding: 0.5rem 0;
+  max-height: 120px;
+  overflow-y: auto;
+  color: var(--text-primary);
+}
+
+.message-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.send-button {
+  background: var(--primary-color);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.send-button:hover:not(:disabled) {
+  background: var(--primary-dark);
+  transform: scale(1.05);
+}
+
+.send-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.send-button svg {
+  width: 20px;
+  height: 20px;
+}
